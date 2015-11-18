@@ -1,0 +1,23 @@
+//index.html
+
+<script>
+	function enable(){
+		$.ajax({
+			type: "POST",
+          url: "setSession.php",
+          data: data,
+          success: function(res) {
+				if(res==="Success"){
+					alert("Success!!!");
+				}
+			}
+		});      
+	}
+</script>
+
+//setSession.php
+
+<?php
+//some process here
+echo "Success";
+?>
