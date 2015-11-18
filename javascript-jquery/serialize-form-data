@@ -1,0 +1,3 @@
+//Serializing form data
+
+$("#formID").serialize();
