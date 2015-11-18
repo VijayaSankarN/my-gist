@@ -1,0 +1,17 @@
+//Redirect using javascript
+
+<?php
+  echo "<script>location.href='to/example/location'</script>";
+
+
+
+//Redirect using header [http://php.net/manual/en/function.header.php]
+
+<?php
+  header("location: to/example/location");
+  
+/* 
+ * !Warning
+ * use die() or exit() after header
+ * use it before any value is sent
+ */ 
