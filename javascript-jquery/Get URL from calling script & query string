@@ -1,5 +1,5 @@
 Concept:
-Get the URL from the calling script and get the query string
+Get the URL from the calling script and get the query string value
 
 index.html
 <script src="my_file.js?version=123"></script>
