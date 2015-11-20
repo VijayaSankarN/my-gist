@@ -1,0 +1,23 @@
+Concept:
+
+index.html
+<script src="my_file.js?version=123"></script>
+alert(getURLParameter("version"));
+
+my_file.js
+var scriptSource = (function(scripts) {
+    var scripts = document.getElementsByTagName('script'),
+        script = scripts[scripts.length - 1];
+
+    if (script.getAttribute.length !== undefined) {
+        return script.src
+    }
+
+    return script.getAttribute('src', -1)
+}());
+
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(scriptSource)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+
