@@ -1,0 +1,16 @@
+Concept:
+Get the URL from address bar and get the query string value
+
+Example URL: http://domain.com/ztest1.php?ai=85&ver=7
+
+//Get the URL from address and return the value of query string
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+//Returns 85
+$(document).ready(function(){
+    alert(getURLParameter('ai'));
+}); //JQuery
+
+window.onload = alert(getURLParameter('ai')); //JavaScript
