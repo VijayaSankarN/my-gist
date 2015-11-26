@@ -1,0 +1,29 @@
+<?php
+$arr[0] = "James1";
+$arr[1] = "James2";
+$arr[2] = "James3";
+$arr[3] = "James4";
+$arr[4] = "James5";
+
+
+Method 1: Using brackets - {}
+
+for($i=0; $i<5; $i++)
+{
+	${'a'.$i} = $arr[$i];
+}
+
+
+Method 2: Using variable of variable method
+
+for($i=0; $i<5; $i++)
+{
+     $name = 'a' . $i;
+     $$name = $arr[$i];
+}
+
+echo $a0; //$arr[0];
+echo $a1; //$arr[1];
+echo $a2; //$arr[2];
+echo $a3; //$arr[3];
+echo $a4; //$arr[4];
