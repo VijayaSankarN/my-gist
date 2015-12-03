@@ -2,11 +2,14 @@
 
 <script>
 	function enable(){
+		var data = {
+      "value": $('#selector').val();
+    };
 		$.ajax({
 			type: "POST",
-          url: "setSession.php",
-          data: data,
-          success: function(res) {
+      url: "setSession.php",
+      data: $.param(data),
+      success: function(res) {
 				if(res==="Success"){
 					alert("Success!!!");
 				}
