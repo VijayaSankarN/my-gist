@@ -1,0 +1,15 @@
+//Calculate the date difference between two dates specified [In input type text]
+
+<input type="text" id="date1"/>
+<input type="text" id="date2"/>
+<button onclick="dateDiff()">Diff</button>
+
+<script>
+	function dateDiff() {
+		var date1 = new Date(document.getElementById('date1').value);
+		var date2 = new Date(document.getElementById('date2').value);
+    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+    alert(diffDays);
+	}
+</script>
