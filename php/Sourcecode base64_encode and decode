@@ -1,0 +1,12 @@
+<?php
+
+echo eval(html_entity_decode(stripcslashes(base64_decode("VGhpcyAncyBiYXNlNjRfZW5jb2RlZCE=")), ENT_QUOTES));
+
+//Will print:
+This 's base64_encoded!
+
+echo base64_encode("echo \"Jame's!!\";");
+echo eval(html_entity_decode(stripcslashes(base64_decode("ZWNobyAiSmFtZSdzISEiOw==")), ENT_QUOTES));
+
+//Will print:
+Jame's!!
