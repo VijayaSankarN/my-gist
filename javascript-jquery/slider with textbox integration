@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Slider - Range with fixed minimum</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ </head>
+<body>
+ 
+ Slider with text box integration
+ 
+<p>
+  <label for="amount">Maximum price:</label>
+  <input type="number" min="10" max="100" id="amount" value="200">
+</p>
+ 
+<div id="slider-range-min"></div>
+   <script>
+  $(function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: parseInt($( "#amount" ).val()),
+      step: 1,
+      min: 10,
+      max: 5000,
+      slide: function( event, ui ) {
+        $( "#amount" ).val(ui.value );
+      }
+    });
+    $( "#amount" ).val($( "#slider-range-min" ).slider( "value" ) );
+  });
+
+  $( "#amount" ).on("change",function() {
+  	$("#slider-range-min").slider("value", parseInt($( "#amount" ).val()));
+  });
+  </script>
+ 
+</body>
+</html>
