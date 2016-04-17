@@ -1,0 +1,7 @@
+“No 'Access-Control-Allow-Origin' header is present on the requested resource”
+
+Beware: Not good!! Terrible!!
+
+Just add this in start of your PHP page which handles the request:
+<?php
+header('Access-Control-Allow-Origin: *'); 
