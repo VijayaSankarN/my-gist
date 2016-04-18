@@ -1,3 +1,5 @@
+Change the color of Radio button with only CSS
+
 HTML:
 
 <input type='radio' name='a' checked/>
